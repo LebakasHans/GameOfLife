@@ -1,28 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0c26cdc3-723a-416f-9021-7741eaa6be0f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameOfLife.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/htlgkr/wintersteigerj190225/gol/GameOfLife.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/htlgkr/wintersteigerj190225/gol/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/htlgkr/wintersteigerj190225/gol/SimpleGraphicsLibrary.java" afterDir="false" />
+    <list default="true" id="739b6e6a-cdb9-4157-8db2-d94a90fe58f1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/htlgkr/wintersteigerj190225/gol/GameOfLife.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/htlgkr/wintersteigerj190225/gol/GameOfLife.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/htlgkr/wintersteigerj190225/gol/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/htlgkr/wintersteigerj190225/gol/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -30,8 +19,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2NPHUoj3OPDRQWabb3UxRDgHY3D" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2P0eTarL1D4wFUF2Q4tZIknRj0h" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -40,7 +28,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/jakob/Documents/Schule/Pos/GameOfLife"
   }
 }]]></component>
   <component name="RunManager">
@@ -66,12 +55,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0c26cdc3-723a-416f-9021-7741eaa6be0f" name="Changes" comment="" />
-      <created>1679558818343</created>
+      <changelist id="739b6e6a-cdb9-4157-8db2-d94a90fe58f1" name="Changes" comment="" />
+      <created>1682598435087</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1679558818343</updated>
-      <workItem from="1679558820619" duration="5886000" />
+      <updated>1682598435087</updated>
+      <workItem from="1682598436527" duration="6001000" />
     </task>
     <servers />
   </component>
@@ -88,21 +77,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/net/htlgkr/wintersteigerj190225/gol/GameOfLife.java</url>
-          <line>122</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/net/htlgkr/wintersteigerj190225/gol/GameOfLife.java</url>
-          <line>137</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

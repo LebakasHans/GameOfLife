@@ -8,20 +8,38 @@ import java.util.Collections;
 public class GameOfLife {
     private final int HEIGHT;
     private final int WIDTH;
+    private final int CELL_SIZE;
+    private final int MAX_LOOPS;
 
     private static final Color COLOR_ALIVE = Color.black;
     private static final Color COLOR_DEAD = Color.white;
-    private static final int MAX_LOOPS = 900;
+
     private SimpleGraphicsLibrary window;
     private int startingCellsCount;
     private boolean[][] field;
 
-    public GameOfLife(SimpleGraphicsLibrary window, int startingCellsCount) {
-        this.window = window;
-        HEIGHT = window.getHeight();
-        WIDTH = window.getWidth();
+    public GameOfLife(int height, int width, int startingCellsCount, int cellSize, int maxLoops) {
+        CELL_SIZE = cellSize;
         this.startingCellsCount = startingCellsCount;
-        field = new boolean[this.window.getWidth()][this.window.getHeight()];
+        adjustField(height, width);
+        WIDTH = field.length * CELL_SIZE;
+        HEIGHT = field[0].length * CELL_SIZE;
+        this.window = new SimpleGraphicsLibrary(WIDTH, HEIGHT, Color.white);
+        MAX_LOOPS = maxLoops;
+    }
+
+    private void adjustField(int height, int width) {
+        int rows = width;
+        while (rows % CELL_SIZE != 0){
+            rows++;
+        }
+        rows = rows/ CELL_SIZE;
+        int columns = height;
+        while (columns % CELL_SIZE != 0){
+            columns++;
+        }
+        columns = columns/ CELL_SIZE;
+        field = new boolean[rows][columns];
     }
 
     public void startSimulation(){
@@ -37,6 +55,7 @@ public class GameOfLife {
             if (Arrays.deepEquals(nextGen, field)){
                 break;
             }
+
             field = nextGen;
             setCells();
         }
@@ -44,13 +63,17 @@ public class GameOfLife {
         System.out.println("Game ended");
     }
 
-    private void setCells() {
-        for (int i = 0; i < field.length; i++) {
-            for (int j = 0; j < field[i].length; j++) {
-                if (field[i][j]){
-                    window.setPixel(i,j, COLOR_ALIVE);
-                }else {
-                    window.setPixel(i,j, COLOR_DEAD);
+    private void setCells(){
+        for (int row = 0; row < field.length; row++) {
+            for (int col = 0; col < field[row].length; col++) {
+                int rowStartingPoint = row * CELL_SIZE;
+                int columnStartingPoint = col * CELL_SIZE;
+                Color color = field[row][col] ? COLOR_ALIVE : COLOR_DEAD;
+
+                for (int i = rowStartingPoint; i < rowStartingPoint + CELL_SIZE; i++) {
+                    for (int j = columnStartingPoint; j < columnStartingPoint + CELL_SIZE; j++) {
+                        window.setPixel(i,j, color);
+                    }
                 }
             }
         }
@@ -69,7 +92,7 @@ public class GameOfLife {
 
     private ArrayList<Integer> generateRandomIndexes() {
         ArrayList<Integer> randomIndex = new ArrayList<>();
-        int totalPixels = window.getWidth() * window.getHeight();
+        int totalPixels = field.length * field[0].length;
         for(int i = 0; i < totalPixels; i++) {
             randomIndex.add(i);
         }
@@ -86,7 +109,6 @@ public class GameOfLife {
 
     private boolean[][] generateNextGeneration(){
         boolean[][] nextGeneration = new boolean[field.length][field[0].length];
-
         for (int i = 0; i < field.length-1; i++) {
             for (int j = 0; j < field[i].length-1; j++) {
                 int neighbourCount = getNeighbourCount(i, j);
@@ -108,8 +130,8 @@ public class GameOfLife {
 
     private int getNeighbourCount(int i, int j) {
         int neighbourCount = 0;
-        boolean upperBound = j-1 < HEIGHT && j-1 > 0;
-        boolean rightBound = i+1 < WIDTH;
+        boolean upperBound = j-1 < field.length && j-1 > 0;
+        boolean rightBound = i+1 < field[0].length;
         boolean lowerBound = j+1 >= 0;
         boolean leftBound = i-1 >= 0;
 

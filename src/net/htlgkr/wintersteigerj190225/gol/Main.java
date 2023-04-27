@@ -4,8 +4,11 @@ import java.awt.*;
 
 public class Main {
     public static void main(String[] args){
-        new GameOfLife(new SimpleGraphicsLibrary(
-             900, 900, Color.WHITE
-        ), 810000).startSimulation();
+        new GameOfLife(1000
+                , 1500
+                , 2000
+                , 20
+                , Integer.MAX_VALUE)
+                .startSimulation();
     }
 }
